@@ -1,0 +1,78 @@
+<style>
+    :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --btn-hover: #5a67d8;
+    }
+
+    .donation-container {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 3px; /* Creates the gradient border effect */
+        background: var(--primary-gradient);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(118, 75, 162, 0.3);
+    }
+
+    .donation-content {
+        background: white;
+        padding: 40px;
+        border-radius: 18px;
+        text-align: center;
+    }
+
+    .donation-content h3 {
+        font-size: 2rem;
+        color: #2d3748;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .donation-content p {
+        color: #718096;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 500px;
+        margin: 0 auto 25px auto;
+    }
+
+    .donate-button {
+        display: inline-block;
+        background: var(--primary-gradient);
+        color: white;
+        padding: 16px 40px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+    }
+
+    .donate-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(118, 75, 162, 0.5);
+    }
+
+    .donation-footer {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #a0aec0;
+    }
+</style>
+
+<div class="donation-container">
+    <div class="donation-content">
+        <h3>Make a Difference</h3>
+        <p>Your support fuels our innovation. Join us in creating a better future through your generous contribution.</p>
+        
+        <a href="donation.html" class="donate-button">
+            Support Our Project
+        </a>
+
+        <div class="donation-footer">
+            Secure Payment • One-time or Monthly
+        </div>
+    </div>
+</div>

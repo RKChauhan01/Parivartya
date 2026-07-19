@@ -1,0 +1,59 @@
+/* =========================================
+   HERO SLIDER DOTS
+========================================= */
+const slides = document.querySelectorAll(".hero-slide");
+
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+/* =========================================P
+   SHOW SLIDE
+========================================= */
+
+function showSlide(index) {
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+
+    dots[index].classList.add("active");
+
+    currentSlide = index;
+}
+
+/* =========================================
+   AUTO SLIDE
+========================================= */
+
+function nextSlide() {
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 2000);
+
+/* =========================================
+   CLICKABLE DOTS
+========================================= */
+
+dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        showSlide(index);
+
+    });
+
+});

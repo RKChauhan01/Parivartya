@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Parivartya Guftgoo | Secure Donation</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        :root {
+            --primary-color: #ffe600;
+            --text-color: #1e293b;
+            --subtle-text: #64748b;
+            --bg-color: #f8fafc;
+            --font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--subtle-text);
+            font-size: 0.9rem;
+            margin: 10px 10px;
+            display: inline-block;
+        }
+
+        .donate-card {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-top: 8px solid var(--primary-color);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .desc {
+            color: var(--subtle-text);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* AMOUNT SELECTION */
+        .amount-selector {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .amt-btn {
+            padding: 10px;
+            border: 2px solid #e2e8f0;
+            background: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .amt-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-input-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .custom-input-wrapper span {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 700;
+            color: var(--subtle-text);
+        }
+
+        #custom-amt {
+            width: 100%;
+            padding: 12px 12px 12px 35px;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+            box-sizing: border-box;
+            font-size: 1rem;
+            font-weight: 700;
+            outline: none;
+        }
+
+        #custom-amt:focus {
+            border-color: var(--primary-color);
+        }
+
+        /* PAY BUTTON */
+        .direct-pay {
+            display: block;
+            background: #1e293b;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .direct-pay.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        /* HIDDEN UPI SECTION */
+        .copy-btn {
+            width: 100%;
+            background: #f1f5f9;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            color: var(--subtle-text);
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .qr-img {
+            width: 130px;
+            height: 130px;
+            margin: 15px 0;
+            border: 1px solid #eee;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .footer-note {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            margin-top: 15px;
+        }
+
+        /* Footer Container */
+        .main-footer {
+            width: 100%;
+            padding: 40px 0;
+            margin-top: auto;
+            /* Pushes footer to bottom if using Flexbox */
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            /* Very subtle line */
+            background: transparent;
+            text-align: center;
+        }
+
+        /* Link Styling */
+        .footer-link {
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-link:hover {
+            transform: translateY(-2px);
+            /* Subtle lift on hover */
+        }
+
+        /* Text Styling */
+        .copyright-text {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #64748b;
+            /* Modern Slate-Gray color */
+            letter-spacing: 0.5px;
+            margin: 0;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect to highlight the Parivartya Brand */
+        .footer-link:hover .copyright-text {
+            color: #f8fafc;
+            /* Brightens to near-white on hover */
+        }
+
+        /* Responsive adjustment */
+        @media (max-width: 640px) {
+            .copyright-text {
+                font-size: 12px;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+
+    <div class="donate-card">
+        <h1>Support Parivartya</h1>
+        <p class="desc">Your support keeps Parivartya alive. Scan the QR code or copy the UPI ID below.</p>
+
+        <!-- QR Code -->
+        <img src="assets/upi-qr.png" alt="UPI QR" class="qr-img">
+
+        <!-- Amount Selection -->
+        <div class="amount-selector">
+            <button class="amt-btn" onclick="setAmount(50, this)">₹50</button>
+            <button class="amt-btn active" onclick="setAmount(100, this)">₹100</button>
+            <button class="amt-btn" onclick="setAmount(200, this)">₹200</button>
+        </div>
+
+        <div class="custom-input-wrapper">
+            <span>₹</span>
+            <input type="number" id="custom-amt" value="100" placeholder="Enter custom amount"
+                oninput="updateFromInput()">
+        </div>
+
+        <!-- Direct Pay Button -->
+        <a href="#" id="pay-link" class="direct-pay">Pay via UPI App</a>
+
+        <!-- Hidden Copy ID -->
+        <button class="copy-btn" id="copy-btn" data-id="rakeshkraj2005@okicici" onclick="copyUPI()">
+            Copy UPI ID
+        </button>
+
+        <div class="footer-note">Privacy Protected. Secure transaction via UPI.</div>
+    </div>
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-links" style="margin-bottom: 15px;">
+            <a href="Privacy_Policy.html"
+                style="margin: 0 10px; color: #64748b; text-decoration: none; font-size: 13px;">Privacy Policy</a>
+            <a href="Term_of_service.html" style="margin: 0 10px; color: #64748b; text-decoration: none; font-size: 13px;">Terms &
+                Conditions</a>
+            <!-- <a href="docs.html"
+                style="margin: 0 10px; color: #64748b; text-decoration: none; font-size: 13px;">Documentation</a>
+        </div> -->
+        <a href="https://parivartya.in" style="text-decoration: none;" rel="noopener" target="_blank">
+            <p class="copyright-text">&copy; 2026 <strong>Parivartya Corporation</strong>. All Rights Reserved.</p>
+        </a>
+    </footer>
+
+    <script>
+        const UPI_ID = "rakeshkraj2005@okicici"; // <--- REPLACE WITH YOUR REAL UPI ID
+        const MERCHANT_NAME = "Parivartya_Guftgoo"; // <--- REPLACE WITH YOUR NAME (No spaces)
+
+        function updatePayLink(amount) {
+            const payLink = document.getElementById('pay-link');
+            if (amount >= 1) {
+                // Correctly encoded URI for UPI
+                const url = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(MERCHANT_NAME)}&am=${amount}&cu=INR&tn=Support%20Guftgoo`;
+                payLink.href = url;
+                payLink.classList.remove('disabled');
+                payLink.innerText = `Pay ₹${amount} via UPI App`;
+            } else {
+                payLink.classList.add('disabled');
+                payLink.innerText = `Enter Amount (Min ₹1)`;
+            }
+        }
+
+        function setAmount(amt, btn) {
+            document.querySelectorAll('.amt-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('custom-amt').value = amt;
+            updatePayLink(amt);
+        }
+
+        function updateFromInput() {
+            document.querySelectorAll('.amt-btn').forEach(b => b.classList.remove('active'));
+            const amt = document.getElementById('custom-amt').value;
+            updatePayLink(amt);
+        }
+
+        function copyUPI() {
+            const upi = document.getElementById('copy-btn').getAttribute('data-id');
+            navigator.clipboard.writeText(upi).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.innerText = "✅ UPI ID Copied!";
+                setTimeout(() => { btn.innerText = "Copy UPI ID"; }, 2000);
+            });
+        }
+
+        // Initialize on load
+        updatePayLink(100);
+    </script>
+</body>
+
+</html>
