@@ -42,7 +42,7 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 2000);
+setInterval(nextSlide, 3000);
 
 /* =========================================
    CLICKABLE DOTS
