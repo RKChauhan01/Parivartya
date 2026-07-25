@@ -29,6 +29,8 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 80%;
+    /* Reduces all rem-based sizes proportionally */
 }
 
 body {
@@ -37,10 +39,12 @@ body {
     color: var(--text-dark);
     background-color: #F8F8F8;
     overflow-x: hidden;
+    zoom: 0.85;
+    /* or 70% */
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -94,13 +98,24 @@ p {
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-dark);
 }
 
 .section-header p {
     font-size: 1.1rem;
+    font-weight: 600;
     color: var(--text-light);
+    letter-spacing: 60%;
+    word-spacing: 40%;
+    display: inline-block;
+    text-align: right;
+    /* Essential to keep the line fitting just the text width */
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    /* Thickness, style (solid/dashed/dotted), and color */
+    padding-bottom: 4px;
+    /* Space between text and line */
+
 }
 
 /* Buttons */
@@ -256,7 +271,6 @@ p {
 
 .categories-section {
     padding: 80px 0;
-    background: #0A0D16;
 }
 
 .categories-grid {
@@ -267,10 +281,10 @@ p {
 }
 
 .category-card {
-    background: #F8F8F8;
     overflow: hidden;
     transition: 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 10px 20px;
 }
 
 .category-card:hover {
@@ -282,7 +296,8 @@ p {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    background: #eaeaea;
+    background: #F8F8F8;
+    padding: 10px 0;
 }
 
 .category-content {
@@ -305,7 +320,7 @@ p {
 .category-btn {
     display: inline-block;
     background: #0067b8;
-    color: #fff;
+    color: #F8F8F8;
     text-decoration: none;
     padding: 12px 22px;
     font-weight: 600;
@@ -502,11 +517,14 @@ footer {
 }
 
 /* 1. INCREASE MAX-WIDTH TO SHIFT ITEMS TO FAR LEFT & RIGHT */
-.footer-content, 
+.footer-content,
 .footer-bottom {
-    max-width: 1400px; /* Increased from 1200px to push content further left & right */
-    width: 92%;        /* Ensures responsive padding on screen edges */
-    margin: 0 auto;    /* Centers the entire block */
+    max-width: 1400px;
+    /* Increased from 1200px to push content further left & right */
+    width: 92%;
+    /* Ensures responsive padding on screen edges */
+    margin: 0 auto;
+    /* Centers the entire block */
     box-sizing: border-box;
 }
 
@@ -514,8 +532,9 @@ footer {
 .footer-content {
     display: grid;
     /* Distributes columns evenly across the entire expanded width */
-    grid-template-columns: 1.8fr 1fr 1fr 1.5fr; 
-    gap: 50px; /* Generous gap between columns */
+    grid-template-columns: 1.8fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    /* Generous gap between columns */
     padding-bottom: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -640,7 +659,8 @@ footer {
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between; /* Pushes copyright far left, links far right */
+    justify-content: space-between;
+    /* Pushes copyright far left, links far right */
     align-items: center;
     padding-top: 24px;
     font-size: 0.85rem;
@@ -677,12 +697,14 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
     }
+
     .footer-bottom {
         flex-direction: column;
         gap: 12px;
         text-align: center;
     }
 }
+
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
@@ -880,7 +902,7 @@ footer {
 }
 
 .product-showcase-content h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -1006,7 +1028,7 @@ footer {
 }
 
 .products-stat-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--white);
 }
@@ -1050,7 +1072,7 @@ footer {
     color: rgb(63, 54, 54);
     max-width: 600px;
     margin: 0 auto;
-    
+
 }
 
 /* Stats Bar */
@@ -1073,7 +1095,7 @@ footer {
 }
 
 .stat-bar-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--white);
 }
@@ -1499,21 +1521,24 @@ footer {
     margin-bottom: 80px;
     background: #F8F8F8;
 }
+
 .applications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 5px;
 }
-.feature-application{
+
+.feature-application {
     padding: 60px 0;
 
 }
 
-.feature-application h2{
+.feature-application h2 {
     font-size: 2.2rem;
     font-weight: 600;
 }
-.feature-application p{
+
+.feature-application p {
     font-size: 1rem;
     font-weight: 600;
     color: #525558;
@@ -1525,6 +1550,7 @@ footer {
     background: #F8F8F8;
     border: 1px solid #18191a;
 }
+
 .application-card::before {
     overflow: hidden;
     transition: 0.3s ease;
@@ -1614,15 +1640,18 @@ footer {
     gap: 5px;
     margin-bottom: 80px;
 }
-.feature-game{
+
+.feature-game {
     padding: 60px 0;
 
 }
-.feature-game h2{
+
+.feature-game h2 {
     font-size: 2.2rem;
     font-weight: 600;
 }
-.feature-game p{
+
+.feature-game p {
     font-size: 1rem;
     font-weight: 600;
     color: #525558;
@@ -1724,8 +1753,8 @@ footer {
 .vscode-modern-section {
     background: #F8F8F8;
     margin-bottom: 80px;
-    
-    
+
+
 }
 
 .vscode-grid {
@@ -1734,15 +1763,17 @@ footer {
     gap: 2px;
 }
 
-.feature-vscode{
+.feature-vscode {
     padding: 60px 0;
 
 }
-.feature-vscode h2{
+
+.feature-vscode h2 {
     font-size: 2.2rem;
     font-weight: 600;
 }
-.feature-vscode p{
+
+.feature-vscode p {
     font-size: 1rem;
     font-weight: 600;
     color: #525558;
@@ -1754,6 +1785,7 @@ footer {
     border: 1px solid #18191a;
 
 }
+
 .vscode-card::before {
     overflow: hidden;
     transition: 0.3s ease;
@@ -1929,13 +1961,15 @@ footer {
     padding: 150px 20px;
 }
 
-.mission-section{
+.mission-section {
     padding: 10px 10px;
 }
-.mission-section h2{
+
+.mission-section h2 {
     font-size: 2rem;
     font-weight: 500;
 }
+
 .modern-info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1985,7 +2019,8 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 10px;
 }
-.values-section h2{
+
+.values-section h2 {
     font-size: 2rem;
     font-weight: 500;
 }
@@ -2058,15 +2093,17 @@ footer {
 }
 
 .map-wrapper {
-  width: 100%;
-  aspect-ratio: 16 / 6; /* Maintains a clean aspect ratio */
-  overflow: hidden;     /* Prevents any edges from sticking out */
+    width: 100%;
+    aspect-ratio: 16 / 6;
+    /* Maintains a clean aspect ratio */
+    overflow: hidden;
+    /* Prevents any edges from sticking out */
 }
 
 .map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .modern-contact-card {
@@ -2194,8 +2231,8 @@ footer {
     cursor: pointer;
     transition: 0.3s;
     margin-top: 40px;
-    
-    
+
+
 }
 
 .modern-contact-btn:hover {
