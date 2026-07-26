@@ -21,9 +21,6 @@ function showSlide(index) {
     });
 
     slides[index].classList.add("active");
-
-    dots[index].classList.add("active");
-
     currentSlide = index;
 }
 
@@ -43,17 +40,3 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 3000);
-
-/* =========================================
-   CLICKABLE DOTS
-========================================= */
-
-dots.forEach((dot, index) => {
-
-    dot.addEventListener("click", () => {
-
-        showSlide(index);
-
-    });
-
-});
