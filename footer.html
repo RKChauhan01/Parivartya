@@ -5,10 +5,18 @@
             <span>Parivartya Corporation</span>
         </div>
         <p>Creating innovative desktop applications and developer tools that transform how you work and code.</p>
+        
+        <!-- FIXED: Added aria-label to all social links -->
         <div class="social-links">
-            <a href="https://www.facebook.com/RKCHAUHAN2005" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/mr.rkchauhan/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/parivartya/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/RKCHAUHAN2005" target="_blank" aria-label="Visit our Facebook page">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/mr.rkchauhan/?hl=en" target="_blank" aria-label="Visit our Instagram profile">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/parivartya/?viewAsMember=true" target="_blank" aria-label="Visit our LinkedIn page">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
     </div>
     
@@ -37,7 +45,12 @@
         <h4>Newsletter</h4>
         <p>Subscribe to our newsletter for the latest updates.</p>
         <input type="email" id="newsletterEmailInput" placeholder="Enter your email" required>
-        <button type="button" id="newsletterSubscribeBtn"><i class="fas fa-paper-plane"></i></button>
+        
+        <!-- FIXED: Added aria-label to subscribe button -->
+        <button type="button" id="newsletterSubscribeBtn" aria-label="Subscribe to newsletter">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+        
         <div id="newsletterMessage" style="margin-top: 0.75rem; font-size: 0.75rem; text-align: center; display: none;"></div>
     </div>
 </div>

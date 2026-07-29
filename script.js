@@ -162,24 +162,6 @@ function statsCounter() {
     stats.forEach(stat => observer.observe(stat));
 }
 
-// Back to top
-function backToTop() {
-    const btn = document.createElement('button');
-    btn.innerHTML = '<i class="fas fa-chevron-up"></i>';
-    btn.style.cssText = `
-        position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px;
-        background: #87CEEB; border: none; border-radius: 50%; cursor: pointer;
-        opacity: 0; transition: all 0.3s; z-index: 999;
-    `;
-    document.body.appendChild(btn);
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) btn.style.opacity = '1';
-        else btn.style.opacity = '0';
-    });
-    
-    btn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
-}
 
 
 

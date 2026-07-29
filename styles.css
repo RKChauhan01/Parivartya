@@ -104,14 +104,14 @@ p {
 
 .section-header p {
     font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-light);
+    color: var(--text-dark);
+    font-weight: bolder;
     letter-spacing: 60%;
     word-spacing: 40%;
     display: inline-block;
     text-align: right;
     /* Essential to keep the line fitting just the text width */
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid var(--text-dark);
     /* Thickness, style (solid/dashed/dotted), and color */
     padding-bottom: 4px;
     /* Space between text and line */
