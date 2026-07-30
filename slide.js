@@ -3,6 +3,7 @@
 ========================================= */
 const slides = document.querySelectorAll(".hero-slide");
 
+const dots = document.querySelectorAll(".dot");
 
 let currentSlide = 0;
 /* =========================================P
