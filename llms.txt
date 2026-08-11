@@ -1,0 +1,44 @@
+# Parivartya Corporation
+
+> Innovating Tomorrow, Today. Creating innovative desktop applications and developer tools that transform how you work and code.
+
+## Company Information
+- **Founder**: Rakesh Kumar
+- **Address**: Haiderpur, New Delhi, India
+
+## About
+Parivartya Corporation builds a unified ecosystem of applications, extensions, and interactive experiences for developers, creators, and innovators. Our tools are designed with developers and businesses in mind, focusing on performance, security, and ease of use.
+
+## Key Principles
+- **Fast Performance**: Optimized for speed and low-latency operations across all platforms (Latency: < 10ms, Speed Index: 99.8).
+- **Secure by Design**: Data is protected with industry-standard security measures and encryption (AES-256, TLS 1.3).
+- **Open Source**: Transparent, community-driven development that remains free to use.
+- **Great Support**: Backed by a dedicated team of developers ready to assist (Support Tier: Dev Priority).
+
+## Product Ecosystem
+
+### Applications (Desktop & Web)
+Powerful desktop and web applications designed for productivity and innovation.
+- Parivartya Guftgoo
+- Parivartya Webvunn
+
+### VS Code Extensions (Developer Tools)
+Developer-focused VS Code tools and extensions to improve the coding experience.
+- Terminal Tune
+- Marker Pen
+- Dev Translate
+- Ghost Typer
+
+### Games (Entertainment & Creativity)
+Fun and engaging games crafted for entertainment and creativity.
+- Parivartya Chakram
+
+## Site Structure & Navigation
+- [Home](https://parivartya.in/)
+- [About Us](https://parivartya.in/about)
+- [Products](https://parivartya.in/products)
+- [Contact](https://parivartya.in/contact)
+
+## Legal
+- [Privacy Policy](https://parivartya.in/Privacy_Policy.html)
+- [Terms of Service](https://parivartya.in/term_of_service.html)

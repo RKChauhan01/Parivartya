@@ -1,3 +1,9 @@
+# Allow all standard bots and AI agents to crawl the site
 User-agent: *
-Allow: /
+Disallow: /login/
+Disallow: /signin/
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /dashboard/
+Disallow: /api/
 Sitemap: https://parivartya.in/sitemap.xml
